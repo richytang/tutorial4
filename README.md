@@ -1,2 +1,2 @@
 # This is tutorial4 
-# try terminal pull and push
+# try terminal pull and push do
