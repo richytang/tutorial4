@@ -1,7 +1,29 @@
 ---
 title: "Learning to reference figures, tables and sections"
 author: "richy"
-output: bookdown::html_document2
-keep_md:true
+output:
+  bookdown::html_document2: default
+keep_md: true  
 ---
 
+``` {r setup, include=FALSE}
+knitr::opts_chunk$set(fig.align = "center")
+```
+
+# Learning to reference figures
+
+```{r}
+library(tidyverse)
+library(bookdown)
+library(knitr)
+```
+```{r Figref, fig.cap = "This is random noise"}
+
+x = seq(1:100)
+y = rnorm(100)
+dat = data.frame(x, y)
+ggplot(dat, aes(x = x, y = y)) + geom_line()
+
+```
+
+\@ref(fig:Figref) this is white noise
